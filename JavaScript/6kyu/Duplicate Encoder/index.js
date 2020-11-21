@@ -1,4 +1,3 @@
 function duplicateEncode(word) {
-  const lowerWord = word.toLowerCase();
-  return lowerWord.split('').map((cv, id) => lowerWord.indexOf(cv) === id && id == lowerWord.lastIndexOf(cv) ? '(' : ')').join('')
+  return word.toLowerCase().split('').map((cv, _, arr) => arr.indexOf(cv) === arr.lastIndexOf(cv) ? '(' : ')').join('')
 }
