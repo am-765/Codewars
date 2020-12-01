@@ -1,3 +1,3 @@
 function arrayDiff(a, b) {
-  return a.filter(cv => b.indexOf(cv) === -1)
+  return a.filter(el => !b.includes(el))
 }
