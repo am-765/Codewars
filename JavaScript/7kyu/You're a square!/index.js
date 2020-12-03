@@ -1,1 +1,1 @@
-const isSquare = n => Number.isInteger(Math.sqrt(n));
+const isSquare = n => Math.sqrt(n) % 1 === 0;
