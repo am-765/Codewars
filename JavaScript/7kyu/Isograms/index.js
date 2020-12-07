@@ -1,3 +1,3 @@
 function isIsogram(str){
-  return [...new Set(str.toLowerCase().split(''))].length === str.length
+  return !/(\w).*\1/i.test(str)
 }
