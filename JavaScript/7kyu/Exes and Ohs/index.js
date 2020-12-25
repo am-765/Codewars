@@ -1,3 +1,5 @@
 function XO(str) {
-  return (str.match(/x/gi) || []).length === (str.match(/o/gi) || []).length
+  const x = str.match(/x/gi);
+  const o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length)
 }
