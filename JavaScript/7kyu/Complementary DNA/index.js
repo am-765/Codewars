@@ -1,24 +1,10 @@
-function DNAStrand(dna){
-	return dna.split('').map(el => {
-		switch (el) {
-			case 'A':
-				return 'T'
-				break;
-			case 'T':
-				return 'A'
-				break;
-			case 'C':
-				return 'G'
-				break;
-			case 'G':
-				return 'C'
-				break;
-			default:
-				break;
-		}
-	}).join('');
+const DNAPairs = {
+	A: 'T',
+	T: 'A',
+	C: 'G',
+	G: 'C',
 }
 
-console.log(DNAStrand("AAAA"));
-console.log(DNAStrand("ATTG"));
-console.log(DNAStrand("GTAT"));
+function DNAStrand(dna){
+	return dna.replace(/./g, a => DNAPairs[a])
+}
