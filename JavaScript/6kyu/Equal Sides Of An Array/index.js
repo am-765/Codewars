@@ -1,6 +1,6 @@
 function findEvenIndex(arr) {
   let left = 0,
-    right = arr.reduce((a, b) => a + b);
+    right = arr.reduce((ac, cv) => ac + cv, 0)
 
   for (let i = 0; i < arr.length; i++) {
     if (0 < i) {
