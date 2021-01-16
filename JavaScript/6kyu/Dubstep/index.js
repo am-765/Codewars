@@ -1,3 +1,3 @@
 function songDecoder(song){
-  return song.replace(/WUB/gi, ' ').replace(/\s+/g, ' ').trim()
+  return song.replace(/(WUB)+/g, ' ').trim()
 }
