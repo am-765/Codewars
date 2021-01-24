@@ -39,6 +39,3 @@ function tickets(peopleInLine) {
   }
   return "YES";
 }
-
-console.log(tickets([25, 25, 50, 50]));
-console.log(tickets([25, 100]));
