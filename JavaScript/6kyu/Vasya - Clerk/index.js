@@ -1,41 +1,23 @@
 function tickets(peopleInLine) {
-  const dollars = {
-    x: 0,
-    y: 0,
-    z: 0
-  };
-
-  for (const iterator of peopleInLine) {
-    switch (iterator) {
+  let [$25, $50, $100] = [0, 0, 0];
+  for (let val of peopleInLine) {
+    switch (val) {
       case 25:
-        dollars.x++;
+        $25++;
         break;
-
       case 50:
-        if (dollars.x >= 1) {
-          dollars.x--;
-          dollars.y++;
-        } else {
-          return "NO";
-        }
+        $50++;
+        $25--;
         break;
-
       case 100:
-        if (dollars.x >= 1 && dollars.y >= 1) {
-          dollars.x--;
-          dollars.y--;
-          dollars.z++;
-        } else if (dollars.x >= 3) {
-          dollars.x -= 3;
-          dollars.z++;
-        } else {
-          return "NO";
-        }
+        $25--;
+        $50 > 0 ? $50-- : ($25 -= 2);
         break;
 
       default:
         break;
     }
+    if ($25 < 0 || $50 < 0) return "NO";
   }
   return "YES";
 }
