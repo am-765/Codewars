@@ -7,5 +7,3 @@ function maskify(cc) {
       .join('') + cc.slice(-4)
   );
 }
-
-console.log(maskify('4556364607935616'));
