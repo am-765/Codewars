@@ -1,4 +1,1 @@
-function printerError(s) {
-  const error = (s.match(/[n-z]/g) || []).length;
-  return `${error}/${s.length}`;
-}
+const printerError = s => `${(s.match(/[^a-m]/g) || []).length}/${s.length}`;
